@@ -1,13 +1,15 @@
 import Logo from "../../img/logo.png";
+import NavBar from "../navbar/Navbar";
 
 const Header = () => {
   return (
-    <header>
-      <div className="App-header">
+    <header className="App-header">
+      <div>
         <div>
           <img src={Logo} className="App-logo" alt="Chrosslaw brand logo" />
         </div>
       </div>
+      <NavBar />
     </header>
   );
 };

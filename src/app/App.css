@@ -49,6 +49,36 @@
   animation: 2s linear infinite;
 }
 
+.nav {
+  display: flex;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.nav button {
+  height: 100%;
+  width: 100px;
+  padding: 5px;
+  background-color: #282c34;
+  color: white;
+  border: none;
+}
+.nav button:hover {
+  background-color: darkgoldenrod;
+  color: black;
+  margin: 0px, 10px;
+  cursor: pointer;
+}
+.nav button:active {
+  background-color: aquamarine;
+  color: black;
+  margin: 0px, 10px;
+}
+
 /* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg) ;

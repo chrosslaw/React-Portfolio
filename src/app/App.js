@@ -1,12 +1,13 @@
 import "./App.css";
 import Header from "../features/header/Header";
-import LogoBar from "../features/logo-bar/LogoBar";
+// import LogoBar from "../features/logo-bar/LogoBar";
 
 function App() {
   return (
-    <div className="header">
+    <div>
       <Header />
-      <LogoBar />
+
+      {/* <LogoBar /> */}
     </div>
   );
 }
