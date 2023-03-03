@@ -1,8 +1,8 @@
 .contact-button {
   padding: 5px;
   transition: 1s all;
-  background-color: red;
-
+  background-color: white;
+  border-radius: 14px;
   margin: 20px;
   font-size: calc(10px + 2vmin);
 }

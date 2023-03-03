@@ -73,7 +73,6 @@
   position: relative;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
-  background-color: red;
 }
 .App-footer a {
   text-decoration: none;
