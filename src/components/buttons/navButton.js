@@ -1,4 +1,8 @@
 const NavButton = ({ buttonName }) => {
-  return <button className="nav-button">{buttonName}</button>;
+  return (
+    <button className="nav-button">
+      <b>{buttonName}</b>
+    </button>
+  );
 };
 export default NavButton;
