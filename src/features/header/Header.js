@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Logo from "../../img/logo.png";
 import NavBar from "../../components/navbar/Navbar";
 
 const Header = () => {
+  const [active, setActive] = useState(false);
+
   return (
     <header className="App-header">
       <div>
@@ -9,7 +12,7 @@ const Header = () => {
           <img src={Logo} className="App-logo" alt="Chrosslaw brand logo" />
         </div>
       </div>
-      <NavBar />
+      <NavBar active={active} setActive={setActive} />
     </header>
   );
 };

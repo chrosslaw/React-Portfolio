@@ -1,6 +1,6 @@
 import NavButton from "../buttons/NavButton";
 
-const NavBar = () => {
+const NavBar = ({ active, setActive }) => {
   return (
     <nav className="nav">
       <NavButton buttonName="About" />
