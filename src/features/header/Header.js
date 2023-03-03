@@ -1,5 +1,5 @@
 import Logo from "../../img/logo.png";
-import NavBar from "../navbar/Navbar";
+import NavBar from "../../components/navbar/Navbar";
 
 const Header = () => {
   return (

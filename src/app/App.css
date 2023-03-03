@@ -46,7 +46,13 @@
 }
 /*end logo bar styling */
 
-/* avigation styling */
+/* main styling */
+.main {
+  min-height: 100vh;
+}
+/* end main styling */
+
+/* navigation styling */
 .nav {
   display: flex;
   position: relative;
@@ -73,12 +79,13 @@
   position: relative;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
+  background-color: #282c34;
 }
 .App-footer a {
   text-decoration: none;
   color: black;
   padding: 20px;
-  margin: 20px 0px;
+  margin-bottom: 50px;
   font-size: calc(10px + 2vmin);
 }
 

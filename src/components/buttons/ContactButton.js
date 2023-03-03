@@ -1,4 +1,5 @@
 import React from "react";
+import "./Buttons.css";
 const ContactButton = ({ contactCardShowing, setContactCardShowing }) => {
   return (
     <button

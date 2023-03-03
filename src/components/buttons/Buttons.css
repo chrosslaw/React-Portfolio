@@ -5,6 +5,7 @@
   border-radius: 14px;
   margin: 20px;
   font-size: calc(10px + 2vmin);
+  border: none;
 }
 
 .contact-button:hover {
@@ -12,6 +13,7 @@
 }
 
 .contact-button:active {
+  background-color: darkgoldenrod;
 }
 .nav button {
   height: 100%;
