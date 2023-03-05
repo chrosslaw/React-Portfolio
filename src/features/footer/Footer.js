@@ -15,6 +15,7 @@ const Footer = () => {
       <div className="footer-bottom">
         {/* eslint-disable-next-line */}
         <a
+          title="My Dribble Page"
           id="dribble"
           className="fa fa-dribbble fa-bounce fa-2x"
           href="https://dribbble.com/chrosslaw"
