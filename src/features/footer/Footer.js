@@ -9,13 +9,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="App-footer" style={{ position: "relative" }}>
+    <footer className="App-footer">
       {contactCardShowing && (
-        <div
-          id="contact-box"
-          className="bounce-in-top rotate-out-center"
-          style={{ position: "absolute", bottom: "100%", left: 0 }}
-        >
+        <div id="contact-box" className="bounce-in-top rotate-out-center">
           <h1>Hi</h1>
           <div id="close">
             <a

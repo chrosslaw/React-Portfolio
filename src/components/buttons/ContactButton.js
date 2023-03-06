@@ -1,17 +1,8 @@
 import React from "react";
 import "./Buttons.css";
-const ContactButton = ({
-  contactCardShowing,
-  setContactCardShowing,
-  contact,
-}) => {
+const ContactButton = ({ contactCardShowing, onClick }) => {
   return (
-    <button
-      className="contact-button"
-      onClick={() => {
-        setContactCardShowing(!contactCardShowing);
-      }}
-    >
+    <button className="contact-button" onClick={onClick}>
       <b>Contact</b>
     </button>
   );
