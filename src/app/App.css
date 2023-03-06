@@ -70,16 +70,23 @@
 #contact-box {
   position: absolute;
   bottom: 100%;
-  left: 0;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: space-around;
+  justify-self: center;
+
   text-align: center;
-  width: 20vw;
+
   padding: 20px;
-  border: solid 1px;
   border-radius: 15px;
 }
+#contact-box a {
+  letter-spacing: 5px;
+}
+.contact-button {
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 20px;
+  font-size: calc(10px + 2vmin);
+}
+
 #dribble {
   --fa-bounce-height: 50px;
   --fa-bounce-rebound: 10px;

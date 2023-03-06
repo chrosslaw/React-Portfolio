@@ -1,24 +1,3 @@
-.contact-button {
-  padding: 5px 10px;
-  transition: 1s all;
-  background-color: darkgoldenrod;
-  border-radius: 14px;
-  margin: 20px;
-  font-size: calc(10px + 2vmin);
-
-  border: none;
-}
-
-.contact-button:hover {
-  cursor: pointer;
-  padding: 5px 20px;
-  border: outset red;
-}
-
-.contact-button:active {
-  padding: 5px 15px;
-  border: inset;
-}
 .nav button {
   height: 100%;
   width: 100px;

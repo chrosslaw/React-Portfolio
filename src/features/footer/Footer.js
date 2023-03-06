@@ -1,6 +1,7 @@
 import { useState } from "react";
-import ContactButton from "../../components/buttons/ContactButton";
-
+import { Button } from "@mui/material";
+import ContactPageIcon from "@mui/icons-material/ContactPage";
+import ContactMailRoundedIcon from "@mui/icons-material/ContactMailRounded";
 const Footer = () => {
   const [contactCardShowing, setContactCardShowing] = useState(false);
 
@@ -11,22 +12,29 @@ const Footer = () => {
   return (
     <footer className="App-footer">
       {contactCardShowing && (
-        <div id="contact-box" className="bounce-in-top rotate-out-center">
-          <h1>Hi</h1>
-          <div id="close">
+        <div id="contact-box">
+          <span>
             <a
-              id="closeMeButton"
-              className="fa-solid fa-angles-down heartbeat"
-            ></a>
-          </div>
+              id="email"
+              href="mailto:chris@chrosslaw.com"
+              className="text-focus-in"
+            >
+              <ContactMailRoundedIcon color="primary" /> CHRIS@CHROSSLAW.COM
+            </a>
+          </span>
+          <br />
         </div>
       )}
 
-      <div className="footer-top">
-        <ContactButton
+      <div className="contact-button">
+        <Button
           onClick={handleContactButtonClick}
-          contactCardShowing={contactCardShowing}
-        />
+          variant="contained"
+          size="large"
+        >
+          <ContactPageIcon />
+          Contact
+        </Button>
       </div>
 
       <div className="footer-bottom">
