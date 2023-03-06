@@ -2,12 +2,33 @@ import { useState } from "react";
 import ContactButton from "../../components/buttons/ContactButton";
 
 const Footer = () => {
-  const { contactCardShowing, setContactCardShowing } = useState(false);
+  const [contactCardShowing, setContactCardShowing] = useState(false);
+
+  const handleContactButtonClick = () => {
+    setContactCardShowing(!contactCardShowing);
+  };
+
   return (
-    <footer className="App-footer">
+    <footer className="App-footer" style={{ position: "relative" }}>
+      {contactCardShowing && (
+        <div
+          id="contact-box"
+          className="bounce-in-top rotate-out-center"
+          style={{ position: "absolute", bottom: "100%", left: 0 }}
+        >
+          <h1>Hi</h1>
+          <div id="close">
+            <a
+              id="closeMeButton"
+              className="fa-solid fa-angles-down heartbeat"
+            ></a>
+          </div>
+        </div>
+      )}
+
       <div className="footer-top">
         <ContactButton
-          setContactCardShowing={setContactCardShowing}
+          onClick={handleContactButtonClick}
           contactCardShowing={contactCardShowing}
         />
       </div>
@@ -54,4 +75,5 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default Footer;
