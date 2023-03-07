@@ -1,7 +1,9 @@
-const Main = () => {
+const Main = ({ activePage }) => {
   return (
     <main className="main">
-      <div></div>
+      <div>
+        <p></p>
+      </div>
     </main>
   );
 };

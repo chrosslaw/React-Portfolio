@@ -48,6 +48,7 @@
 
 /* main styling */
 .main {
+  background-color: antiquewhite;
   min-height: 100vh;
 }
 /* end main styling */
@@ -63,7 +64,33 @@
   align-items: center;
   gap: 5px;
 }
-
+.nav button {
+  height: 100%;
+  width: 100px;
+  padding: 5px;
+  margin: 0px 10px;
+  background-color: #282c34;
+  color: #90b8f8;
+  border-radius: 14px 14px 0px 0px;
+  box-shadow: 0 0 0 5px #ffffff;
+  border: none;
+}
+.nav button:hover {
+  background-color: #5f85db;
+  color: black;
+  margin: 0px, 10px;
+  cursor: pointer;
+}
+.nav button.active {
+  background-color: #90b8f8;
+  color: black;
+  margin-bottom: -10px;
+}
+.nav button.active {
+  background-color: #90b8f8;
+  color: black;
+  margin-bottom: -10px;
+}
 /* end navigation styling */
 
 /* footer styling */

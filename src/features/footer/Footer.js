@@ -15,7 +15,7 @@ const Footer = () => {
       <div
         id="contact-box"
         className={
-          contactBoxVisible ? "bounce-in-top text-focus-in" : "bounce-out-top"
+          contactBoxVisible ? "bounce-in-top text-focus-in" : "text-blur-out"
         }
       >
         <span>

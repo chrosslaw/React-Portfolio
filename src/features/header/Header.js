@@ -2,8 +2,13 @@ import { useState } from "react";
 import Logo from "../../img/logo.png";
 import NavBar from "../../components/navbar/Navbar";
 
-const Header = () => {
-  const [active, setActive] = useState(false);
+const Header = ({ setActivePage }) => {
+  const [activeButton, setActiveButton] = useState("About");
+
+  const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName);
+    setActivePage(buttonName);
+  };
 
   return (
     <header className="App-header">
@@ -12,7 +17,7 @@ const Header = () => {
           <img src={Logo} className="App-logo" alt="Chrosslaw brand logo" />
         </div>
       </div>
-      <NavBar active={active} setActive={setActive} />
+      <NavBar activeButton={activeButton} onButtonClick={handleButtonClick} />
     </header>
   );
 };
