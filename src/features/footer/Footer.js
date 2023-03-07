@@ -2,29 +2,33 @@ import { useState } from "react";
 import { Button } from "@mui/material";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import ContactMailRoundedIcon from "@mui/icons-material/ContactMailRounded";
+
 const Footer = () => {
-  const [contactCardShowing, setContactCardShowing] = useState(false);
+  const [contactBoxVisible, setContactBoxVisible] = useState(false);
 
   const handleContactButtonClick = () => {
-    setContactCardShowing(!contactCardShowing);
+    setContactBoxVisible(!contactBoxVisible);
   };
 
   return (
     <footer className="App-footer">
-      {contactCardShowing && (
-        <div id="contact-box">
-          <span>
-            <a
-              id="email"
-              href="mailto:chris@chrosslaw.com"
-              className="text-focus-in"
-            >
-              <ContactMailRoundedIcon color="primary" /> CHRIS@CHROSSLAW.COM
-            </a>
-          </span>
-          <br />
-        </div>
-      )}
+      <div
+        id="contact-box"
+        className={
+          contactBoxVisible ? "bounce-in-top text-focus-in" : "bounce-out-top"
+        }
+      >
+        <span>
+          <a
+            id="email"
+            href="mailto:chris@chrosslaw.com"
+            className="text-focus-in"
+          >
+            <ContactMailRoundedIcon color="primary" /> CHRIS@CHROSSLAW.COM
+          </a>
+        </span>
+        <br />
+      </div>
 
       <div className="contact-button">
         <Button
@@ -32,8 +36,7 @@ const Footer = () => {
           variant="contained"
           size="large"
         >
-          <ContactPageIcon />
-          Contact
+          <ContactPageIcon /> Contact
         </Button>
       </div>
 

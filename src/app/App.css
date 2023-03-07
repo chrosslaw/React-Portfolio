@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #26282b;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -67,18 +67,37 @@
 /* end navigation styling */
 
 /* footer styling */
+.App-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  background-color: #26282b;
+}
+.App-footer a {
+  text-decoration: none;
+  color: rgb(41, 123, 195);
+  padding: 20px;
+  margin-bottom: 50px;
+  font-size: calc(12px + 2vmin);
+}
+.App-footer a:hover {
+  color: red;
+}
+
 #contact-box {
   position: absolute;
   bottom: 100%;
   justify-self: center;
-
   text-align: center;
-
   padding: 20px;
-  border-radius: 15px;
 }
 #contact-box a {
   letter-spacing: 5px;
+  font-size: calc(12px + 2vmin);
+  justify-self: center;
 }
 .contact-button {
   padding: 5px 10px;
@@ -92,23 +111,5 @@
   --fa-bounce-rebound: 10px;
   --fa-bounce-jump-scale-x: 1.5;
 }
-.App-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  background-color: #282c34;
-}
-.App-footer a {
-  text-decoration: none;
-  color: rgb(41, 123, 195);
-  padding: 20px;
-  margin-bottom: 50px;
-  font-size: calc(12px + 2vmin);
-}
-.App-footer a:hover {
-  color: red;
-}
+
 /* end footer styling */
