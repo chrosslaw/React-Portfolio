@@ -1,8 +1,10 @@
 const Main = ({ activePage }) => {
   return (
     <main className="main">
-      <div>
-        <p></p>
+      <div className="content">
+        <div className={activePage}>
+          <p></p>
+        </div>
       </div>
     </main>
   );

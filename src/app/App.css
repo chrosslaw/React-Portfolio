@@ -48,9 +48,21 @@
 
 /* main styling */
 .main {
-  background-color: antiquewhite;
+  position: relative;
   min-height: 100vh;
+  margin-top: -10px;
+  background-color: #90b8f8;
 }
+@-moz-document url-prefix() {
+  .main {
+    margin-top: -11px;
+  }
+}
+.content {
+  background-color: white;
+}
+/* .About {
+} */
 /* end main styling */
 
 /* navigation styling */
@@ -65,6 +77,9 @@
   gap: 5px;
 }
 .nav button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100px;
   padding: 5px;
@@ -73,7 +88,6 @@
   color: #90b8f8;
   border-radius: 14px 14px 0px 0px;
   box-shadow: 0 0 0 5px #ffffff;
-  border: none;
 }
 .nav button:hover {
   background-color: #5f85db;
@@ -81,15 +95,13 @@
   margin: 0px, 10px;
   cursor: pointer;
 }
+
 .nav button.active {
   background-color: #90b8f8;
   color: black;
   margin-bottom: -10px;
-}
-.nav button.active {
-  background-color: #90b8f8;
-  color: black;
-  margin-bottom: -10px;
+  box-shadow: none;
+  border: none;
 }
 /* end navigation styling */
 
