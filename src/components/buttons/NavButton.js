@@ -1,11 +1,13 @@
 import React from "react";
 
-const NavButton = ({ buttonName, activeButton, onClick }) => {
+const NavButton = ({ buttonName, activeButton, onClick, activePage }) => {
   const isActive = buttonName === activeButton;
 
   return (
     <button
-      className={`nav-button ${isActive ? "active" : "not-active"}`}
+      className={`nav-button ${activePage} ${
+        isActive ? `active` : "not-active"
+      }`}
       onClick={() => onClick(buttonName)}
     >
       <b>{buttonName}</b>

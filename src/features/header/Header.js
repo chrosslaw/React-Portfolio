@@ -2,7 +2,7 @@ import { useState } from "react";
 import Logo from "../../img/logo.png";
 import NavBar from "../../components/navbar/Navbar";
 
-const Header = ({ setActivePage }) => {
+const Header = ({ setActivePage, activePage }) => {
   const [activeButton, setActiveButton] = useState("About");
 
   const handleButtonClick = (buttonName) => {
@@ -17,7 +17,11 @@ const Header = ({ setActivePage }) => {
           <img src={Logo} className="App-logo" alt="Chrosslaw brand logo" />
         </div>
       </div>
-      <NavBar activeButton={activeButton} onButtonClick={handleButtonClick} />
+      <NavBar
+        activePage={activePage}
+        activeButton={activeButton}
+        onButtonClick={handleButtonClick}
+      />
     </header>
   );
 };

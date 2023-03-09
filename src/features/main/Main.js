@@ -1,11 +1,7 @@
 const Main = ({ activePage }) => {
   return (
-    <main className="main">
-      <div className="content">
-        <div className={activePage}>
-          <p></p>
-        </div>
-      </div>
+    <main className={`main ${activePage}`}>
+      <div className={activePage}></div>
     </main>
   );
 };

@@ -10,7 +10,7 @@ function App() {
   const [activePage, setActivePage] = useState("about");
   return (
     <div>
-      <Header setActivePage={setActivePage} />
+      <Header setActivePage={setActivePage} activePage={activePage} />
       <Main activePage={activePage} />
       {/* <LogoBar /> */}
       <Footer />
