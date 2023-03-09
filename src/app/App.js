@@ -7,7 +7,7 @@ import Main from "../features/main/Main";
 // import LogoBar from "../features/logo-bar/LogoBar";
 
 function App() {
-  const [activePage, setActivePage] = useState("about");
+  const [activePage, setActivePage] = useState("About");
   return (
     <div>
       <Header setActivePage={setActivePage} activePage={activePage} />
