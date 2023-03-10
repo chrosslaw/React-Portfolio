@@ -1,16 +1,14 @@
 import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+// import Skills from "./Skills";
+import About from "./About";
+// import Projects from "./Projects";
+
 const Main = ({ activePage }) => {
   return (
     <main className={`main ${activePage}`}>
-      <React.Fragment>
-        <CssBaseline />
-        <Container maxWidth="lg" fixed>
-          <Box sx={{ bgcolor: "#ffffff", height: "100vh" }} />
-        </Container>
-      </React.Fragment>
+      {activePage === "About" && <About />}
+      {/* {activePage === "Skills" && <Skills />}
+      {activePage === "Projects" && <Projects />} */}
     </main>
   );
 };

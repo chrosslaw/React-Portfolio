@@ -4,7 +4,6 @@ import Logo from "./Logo";
 const LogoBar = () => {
   const [logos, setLogos] = useState([]);
   const sliderRef = useRef(null);
-  const logoWidth = 120; // width of each logo element
 
   useEffect(() => {
     const logoPaths = require
@@ -31,7 +30,7 @@ const LogoBar = () => {
   useEffect(() => {
     function moveLogos() {
       const slider = sliderRef.current;
-
+      const logoWidth = 120; // width of each logo element
       let pos = 0;
 
       function updateLogos() {
