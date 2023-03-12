@@ -60,6 +60,7 @@
   position: relative;
   min-height: 50vh;
   width: 80vw;
+  max-width: 1080px;
   margin: 5px auto 10px auto;
   border-radius: 15px;
   padding: 60px;
@@ -87,13 +88,18 @@ div.about-background {
   width: 90%;
   background-image: url("../img/photos/office-background.png");
   background-position: center;
+  max-width: 960px;
 }
 .myPhoto {
   position: absolute;
   left: 0;
   bottom: 0;
 }
-
+.about-text {
+  margin: 30px;
+  padding: 10px;
+  opacity: 0.5;
+}
 /* end about page styling*/
 
 /* navigation styling */

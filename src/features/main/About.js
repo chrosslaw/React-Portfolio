@@ -1,13 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import myPhoto from "../../img/photos/chris-no-bg.png";
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardActions,
-  Button,
-  CardMedia,
-} from "@mui/material";
+import { Paper, CardMedia } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 const ResponsiveImage = styled(CardMedia)`
@@ -25,10 +18,17 @@ const ResponsiveImage = styled(CardMedia)`
 `;
 
 const About = () => {
+  const [text, setText] = useState("");
+
   return (
     <div className="about-background">
       <div>
         <ResponsiveImage component="img" image={myPhoto} alt="My Photo" />
+      </div>
+      <div className="about-text">
+        <Paper>
+          <pre>{text}</pre>
+        </Paper>
       </div>
     </div>
   );
