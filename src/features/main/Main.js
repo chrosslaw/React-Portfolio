@@ -1,14 +1,14 @@
 import * as React from "react";
-// import Skills from "./Skills";
+import Skills from "./Skills";
 import About from "./About";
-// import Projects from "./Projects";
+import Projects from "./Projects";
 
 const Main = ({ activePage }) => {
   return (
     <main className={`main ${activePage}`}>
       {activePage === "About" && <About />}
-      {/* {activePage === "Skills" && <Skills />}
-      {activePage === "Projects" && <Projects />} */}
+      {activePage === "Skills" && <Skills />}
+      {activePage === "Projects" && <Projects />}
     </main>
   );
 };
