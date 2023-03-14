@@ -1,5 +1,9 @@
 import LogoBar from "../logo-bar/LogoBar";
 const Skills = () => {
-  return <div>{LogoBar}</div>;
+  return (
+    <div className="skills-container">
+      <LogoBar />
+    </div>
+  );
 };
 export default Skills;

@@ -44,7 +44,7 @@ const LogoBar = () => {
         slider.style.transform = `translateX(${pos}px)`;
       }
 
-      const intervalId = setInterval(updateLogos, 10);
+      const intervalId = setInterval(updateLogos, 12);
 
       return () => clearInterval(intervalId);
     }

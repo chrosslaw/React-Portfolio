@@ -1,7 +1,5 @@
 // import React, { useEffect, useState } from "react";
 import myPhoto from "../../img/photos/chris-no-bg.png";
-import { Paper, CardMedia } from "@mui/material";
-import { styled } from "@mui/material/styles";
 
 const About = () => {
   // const [text, setText] = useState("");
