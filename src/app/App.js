@@ -9,9 +9,11 @@ import Main from "../features/main/Main";
 function App() {
   const [activePage, setActivePage] = useState("About");
   return (
-    <div>
+    <div className="App">
       <Header setActivePage={setActivePage} activePage={activePage} />
+
       <Main activePage={activePage} />
+
       {/* <LogoBar /> */}
       <Footer />
     </div>

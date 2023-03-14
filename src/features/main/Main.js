@@ -5,7 +5,7 @@ import Projects from "./Projects";
 
 const Main = ({ activePage }) => {
   return (
-    <main className={`main ${activePage}`}>
+    <main className={` ${activePage}`}>
       {activePage === "About" && <About />}
       {activePage === "Skills" && <Skills />}
       {activePage === "Projects" && <Projects />}

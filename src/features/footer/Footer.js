@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <footer className="App-footer">
-      <div id="contact-box" className="bounce-in-top text-focus-in">
+      <div id="contact-box" className="text-focus-in">
         <span>
           {contactBoxVisible && (
             <a
@@ -31,7 +31,7 @@ const Footer = () => {
         <Button
           onClick={handleContactButtonClick}
           variant="contained"
-          size="large"
+          size="medium"
         >
           <ContactPageIcon /> Contact
         </Button>
