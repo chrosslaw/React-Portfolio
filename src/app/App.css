@@ -28,6 +28,8 @@
 
 /* Logo bar styling */
 .logo-bar {
+  display: flex;
+  align-items: center;
   position: relative;
   height: 100px;
   min-width: 100%;
@@ -36,19 +38,28 @@
 }
 
 .slider {
-  width: 110%;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
   display: flex;
 }
 
 .logo {
+  display: flex;
+  justify-self: center;
+  align-self: center;
   width: auto;
   height: 50px;
   padding: 5px;
-  margin-right: 20px;
   opacity: 1;
-  transform: translate3d(0px, 0px, 0px);
-  animation: 2s ease-in infinite;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 1s linear;
+  animation: 2s ease-in-out infinite;
+}
+.logo:hover {
+  transform: rotate(360deg);
 }
 /* End logo bar styling */
 
@@ -73,17 +84,18 @@ main {
 }
 
 .Skills {
+  display: flex;
+  align-items: center;
   position: relative;
   background-color: #342832;
   flex-basis: 100%;
   margin-bottom: 5px;
+  overflow: hidden;
 }
 div.skills-container {
-  display: flex;
   height: 100%;
   width: 95%;
   position: relative;
-  overflow: hidden;
   background-color: white;
 }
 .Projects {

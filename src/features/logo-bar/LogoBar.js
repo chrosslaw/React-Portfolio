@@ -30,7 +30,7 @@ const LogoBar = () => {
   useEffect(() => {
     function moveLogos() {
       const slider = sliderRef.current;
-      const logoWidth = 120; // width of each logo element
+      const logoWidth = 85; // width of each logo element
       let pos = 0;
 
       function updateLogos() {
@@ -44,7 +44,7 @@ const LogoBar = () => {
         slider.style.transform = `translateX(${pos}px)`;
       }
 
-      const intervalId = setInterval(updateLogos, 12);
+      const intervalId = setInterval(updateLogos, 30);
 
       return () => clearInterval(intervalId);
     }
