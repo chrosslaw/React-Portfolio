@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Logo from "./Logo";
 
-const LogoBar = () => {
+const LogoBar = ({ speed, size, direction }) => {
   const [logos, setLogos] = useState([]);
   const sliderRef = useRef(null);
 
@@ -19,26 +19,34 @@ const LogoBar = () => {
               src={module.default}
               alt={logoPaths[i]}
               key={logoPaths[i]}
+              size={size}
               onLoad={() => console.log(`Loaded logo: ${logoPaths[i]}`)}
             />
           ))
         );
       })
       .catch((err) => console.error(err));
-  }, []);
+  }, [size]);
 
   useEffect(() => {
     function moveLogos() {
       const slider = sliderRef.current;
-      const logoWidth = 85; // width of each logo element
+      const logoWidth = size * 1.5; // width of each logo element
       let pos = 0;
 
       function updateLogos() {
-        pos -= 1;
+        if (direction === "left") {
+          pos -= speed;
+        } else {
+          pos += speed;
+        }
 
         if (pos <= -logoWidth) {
           pos += logoWidth;
           slider.appendChild(slider.firstChild);
+        } else if (pos >= 0) {
+          pos -= logoWidth;
+          slider.insertBefore(slider.lastChild, slider.firstChild);
         }
 
         slider.style.transform = `translateX(${pos}px)`;
@@ -52,7 +60,7 @@ const LogoBar = () => {
     if (logos.length > 0) {
       moveLogos();
     }
-  }, [logos]);
+  }, [logos, speed, size, direction]);
 
   return (
     <div className="logo-bar">
