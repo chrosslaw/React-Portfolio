@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Logo from "./Logo";
 
 const LogoBar = ({
@@ -8,11 +8,12 @@ const LogoBar = ({
   barClass,
   sliderClass,
   logoClass,
+  logos,
+  setLogos,
+  setLogos2,
 }) => {
-  const [logos, setLogos] = useState([]);
-  const [logos2, setLogos2] = useState([]);
   const sliderRef = useRef(null);
-
+  const sliderRef2 = useRef(null);
   useEffect(() => {
     const logoPaths = require
       .context("../../img/logos", false, /\.(png|jpe?g|svg)$/)
@@ -35,11 +36,12 @@ const LogoBar = ({
         );
       })
       .catch((err) => console.error(err));
-  }, [size]);
+  }, [logoClass, size]);
 
   useEffect(() => {
     function moveLogos() {
       const slider = sliderRef.current;
+      const slider2 = sliderRef2.current;
       const logoWidth = size * 1.5; // width of each logo element
       let pos = 0;
 
@@ -52,13 +54,14 @@ const LogoBar = ({
 
         if (pos <= -logoWidth) {
           pos += logoWidth;
-          slider.appendChild(slider.firstChild);
-        } else if (pos >= 0) {
-          pos -= logoWidth;
-          slider.insertBefore(slider.lastChild, slider.firstChild);
+          const newLogos = [...logos];
+          const removedLogo = newLogos.shift();
+          setLogos(newLogos);
+          setLogos2((prevLogos) => [...prevLogos, removedLogo]);
         }
 
         slider.style.transform = `translateX(${pos}px)`;
+        slider2.style.transform = `translateX(${pos}px)`;
       }
 
       const intervalId = setInterval(updateLogos, 30);
@@ -69,7 +72,7 @@ const LogoBar = ({
     if (logos.length > 0) {
       moveLogos();
     }
-  }, [logos, speed, size, direction]);
+  }, [logos, speed, size, direction, setLogos]);
 
   return (
     <div className={barClass}>
