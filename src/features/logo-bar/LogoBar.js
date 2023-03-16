@@ -27,6 +27,7 @@ const LogoBar = ({
               src={module.default}
               alt={logoPaths[i]}
               key={logoPaths[i]}
+              logoClass={logoClass}
               size={size}
               onLoad={() => console.log(`Loaded logo: ${logoPaths[i]}`)}
             />
