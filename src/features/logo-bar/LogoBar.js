@@ -1,8 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 import Logo from "./Logo";
 
-const LogoBar = ({ speed, size, direction }) => {
+const LogoBar = ({
+  speed,
+  size,
+  direction,
+  barClass,
+  sliderClass,
+  logoClass,
+}) => {
   const [logos, setLogos] = useState([]);
+  const [logos2, setLogos2] = useState([]);
   const sliderRef = useRef(null);
 
   useEffect(() => {
@@ -63,10 +71,10 @@ const LogoBar = ({ speed, size, direction }) => {
   }, [logos, speed, size, direction]);
 
   return (
-    <div className="logo-bar">
-      <div className="slider" ref={sliderRef}>
+    <div className={barClass}>
+      <div className={sliderClass} ref={sliderRef}>
         {logos.map((logo, i) => (
-          <div className="logo" key={i}>
+          <div className={logoClass} key={i}>
             {logo}
           </div>
         ))}
