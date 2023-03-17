@@ -9,7 +9,7 @@ const LogoBar = ({
   logoClass,
 }) => {
   const [logos, setLogos] = useState([]);
-  const [logos2, setLogos2] = useState([]);
+
   const sliderRef = useRef(null);
   useEffect(() => {
     const logoPaths = require
@@ -25,7 +25,6 @@ const LogoBar = ({
               src={module.default}
               alt={logoPaths[i]}
               key={logoPaths[i]}
-              logoClass={logoClass}
               size={size}
               onLoad={() => console.log(`Loaded logo: ${logoPaths[i]}`)}
             />
@@ -33,7 +32,7 @@ const LogoBar = ({
         );
       })
       .catch((err) => console.error(err));
-  }, [size]);
+  }, [logoClass, size]);
   useEffect(() => {
     function moveLogos() {
       const slider = sliderRef.current;

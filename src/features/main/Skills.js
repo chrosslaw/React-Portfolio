@@ -4,22 +4,13 @@ const Skills = () => {
   return (
     <div className="skills-container">
       <LogoBar
-        speed={1.1}
-        size={80}
+        speed={1.8}
+        size={160}
         logoClass="logo"
         barClass="logo-bar"
         sliderClass="slider"
         direction="left"
       />
-      {/* <LogoBar
-    <LogoBar
-      speed={2.2}
-      size={160}
-      logoClass="logo-two"
-      barClass="logo-bar-two"
-      sliderClass="slider bar-right"
-      direction="right"
-    /> */}
     </div>
   );
 };
