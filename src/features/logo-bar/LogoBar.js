@@ -1,6 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Logo from "./Logo";
-
 const LogoBar = ({
   speed,
   size,
@@ -8,12 +7,10 @@ const LogoBar = ({
   barClass,
   sliderClass,
   logoClass,
-  logos,
-  setLogos,
-  setLogos2,
 }) => {
+  const [logos, setLogos] = useState([]);
+  const [logos2, setLogos2] = useState([]);
   const sliderRef = useRef(null);
-  const sliderRef2 = useRef(null);
   useEffect(() => {
     const logoPaths = require
       .context("../../img/logos", false, /\.(png|jpe?g|svg)$/)
@@ -36,44 +33,34 @@ const LogoBar = ({
         );
       })
       .catch((err) => console.error(err));
-  }, [logoClass, size]);
-
+  }, [size]);
   useEffect(() => {
     function moveLogos() {
       const slider = sliderRef.current;
-      const slider2 = sliderRef2.current;
       const logoWidth = size * 1.5; // width of each logo element
       let pos = 0;
-
       function updateLogos() {
         if (direction === "left") {
           pos -= speed;
         } else {
           pos += speed;
         }
-
         if (pos <= -logoWidth) {
           pos += logoWidth;
-          const newLogos = [...logos];
-          const removedLogo = newLogos.shift();
-          setLogos(newLogos);
-          setLogos2((prevLogos) => [...prevLogos, removedLogo]);
+          slider.appendChild(slider.firstChild);
+        } else if (pos >= 0) {
+          pos -= logoWidth;
+          slider.insertBefore(slider.lastChild, slider.firstChild);
         }
-
         slider.style.transform = `translateX(${pos}px)`;
-        slider2.style.transform = `translateX(${pos}px)`;
       }
-
       const intervalId = setInterval(updateLogos, 30);
-
       return () => clearInterval(intervalId);
     }
-
     if (logos.length > 0) {
       moveLogos();
     }
-  }, [logos, speed, size, direction, setLogos]);
-
+  }, [logos, speed, size, direction]);
   return (
     <div className={barClass}>
       <div className={sliderClass} ref={sliderRef}>
@@ -86,5 +73,4 @@ const LogoBar = ({
     </div>
   );
 };
-
 export default LogoBar;

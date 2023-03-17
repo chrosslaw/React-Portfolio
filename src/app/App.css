@@ -82,7 +82,7 @@
   padding: 20px;
   background-size: contain;
   transition: transform 1s linear;
-  animation: 10s ease-in infinite;
+  animation: 2s ease-in infinite;
 }
 .logo:hover {
   transform: rotate(360deg);
