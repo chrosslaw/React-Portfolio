@@ -4,7 +4,7 @@ const NavBar = ({ activeButton, onButtonClick, activePage }) => {
   return (
     <nav className="nav">
       <NavButton
-        buttonName={`About`}
+        buttonName="About"
         activeButton={activeButton}
         onClick={onButtonClick}
         activePage={activePage}
