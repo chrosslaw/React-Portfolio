@@ -1,8 +1,22 @@
-// import React, { useEffect, useState } from "react";
-import myPhoto from "../../img/photos/chris-no-bg.png";
-
+import { useState } from "react";
+import myPhoto from "../../img/photos/me/chris-no-bg.png";
 const About = () => {
-  // const [text, setText] = useState("");
+  const [photo, setPhoto] = useState(myPhoto);
+
+  const images = [];
+  function importAll(img) {
+    img.keys().forEach((key) => images.push(img(key)));
+  }
+  importAll(
+    require.context("../../img/photos/me/", false, /\.(png|jpe?g|svg)$/)
+  );
+
+  const handleClick = () => {
+    let randomNumber = Math.floor(Math.random() * images.length);
+    console.log(randomNumber);
+    let newPhoto = images[randomNumber];
+    setPhoto(newPhoto);
+  };
 
   return (
     <div className="about-background">
@@ -14,7 +28,7 @@ const About = () => {
         </p>
       </div>
       <div id="profile-pic-container">
-        <img src={myPhoto} alt="My profile pic" />
+        <img src={photo} alt="My profile pic" onClick={handleClick} />
       </div>
     </div>
   );
