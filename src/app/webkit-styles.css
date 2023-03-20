@@ -1,6 +1,6 @@
 .text-focus-in {
-  -webkit-animation: text-focus-in 1.5s linear both;
-  animation: text-focus-in 1.5s linear both;
+  -webkit-animation: text-focus-in 1s linear both;
+  animation: text-focus-in 1s linear both;
 }
 .text-blur-out {
   -webkit-animation: text-blur-out 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)

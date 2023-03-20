@@ -12,19 +12,16 @@ const Footer = () => {
 
   return (
     <footer className="App-footer">
-      <div id="contact-box" className="text-focus-in">
-        <span>
-          {contactBoxVisible && (
-            <a
-              id="email"
-              href="mailto:chris@chrosslaw.com"
-              className="text-focus-in"
-            >
-              <ContactMailRoundedIcon color="primary" /> CHRIS@CHROSSLAW.COM
-            </a>
-          )}
-        </span>
-        <br />
+      <div id="contact-box">
+        {contactBoxVisible && (
+          <a
+            id="email"
+            href="mailto:chris@chrosslaw.com"
+            className="text-focus-in contact"
+          >
+            <ContactMailRoundedIcon color="primary" /> chris@chrosslaw.com
+          </a>
+        )}
       </div>
 
       <div className="contact-button">
