@@ -13,7 +13,6 @@ const About = () => {
 
   const handleClick = () => {
     let randomNumber = Math.floor(Math.random() * images.length);
-    console.log(randomNumber);
     let newPhoto = images[randomNumber];
     setPhoto(newPhoto);
   };
