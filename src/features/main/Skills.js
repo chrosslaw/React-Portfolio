@@ -4,8 +4,8 @@ const Skills = () => {
   return (
     <div className="skills-container">
       <LogoBar
-        speed={1.8}
-        size={160}
+        speed={2}
+        size={130}
         logoClass="logo"
         barClass="logo-bar"
         sliderClass="slider"
