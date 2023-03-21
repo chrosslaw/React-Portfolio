@@ -26,6 +26,7 @@ const About = () => {
           about text styling!
         </p>
       </div>
+
       <div id="profile-pic-container">
         <img src={photo} alt="My profile pic" onClick={handleClick} />
       </div>
