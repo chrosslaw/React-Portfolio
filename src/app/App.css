@@ -103,22 +103,32 @@
   overflow: hidden;
 }
 
-.bg1,
 .skills-container {
   height: 100%;
   width: 100%;
   position: relative;
 }
-main.Skills::before {
+main.About::before {
   content: "";
   position: absolute;
-
+  border-radius: 15px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fdffa2;
+  background-color: #8ecccc;
   clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+.bg1::before {
+  content: "";
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #50717b;
+  clip-path: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
 }
 main.Skills::after {
   content: "";
@@ -129,18 +139,9 @@ main.Skills::after {
   width: 100%;
   height: 100%;
   background-color: rgb(195, 249, 196);
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
 }
-/* .skills-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 
-  z-index: 5;
-} */
 .Projects {
   flex-basis: 100%;
 }
@@ -226,15 +227,23 @@ main.Skills::after {
 }
 .nav-button.active {
   background: none;
-
+  margin-bottom: -10px;
   box-shadow: none;
   border: none;
   /* border: solid 2px black; */
   cursor: default;
 }
-.nav-button.Skills,
-.nav-button.Projects,
+.nav-button.Skills {
+  background-color: white;
+  color: #212121;
+}
+
 .nav-button.About {
+  background-color: #8ecccc;
+  color: Black;
+}
+
+.nav-button.Projects {
   background-color: white;
   color: Black;
 }

@@ -18,19 +18,22 @@ const About = () => {
   };
 
   return (
-    <div className="about-background">
-      <div className="about-text">
-        <p>
-          This input is only a test of the about text styling! This input is
-          only a test of the about text styling!This input is only a test of the
-          about text styling!
-        </p>
-      </div>
+    <>
+      <div className="bg1"></div>
+      <div className="about-background">
+        <div className="about-text">
+          <p>
+            This input is only a test of the about text styling! This input is
+            only a test of the about text styling!This input is only a test of
+            the about text styling!
+          </p>
+        </div>
 
-      <div id="profile-pic-container">
-        <img src={photo} alt="My profile pic" onClick={handleClick} />
+        <div id="profile-pic-container">
+          <img src={photo} alt="My profile pic" onClick={handleClick} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
