@@ -7,7 +7,7 @@ import redditChargedLogo from "../../img/reddit-charged/favicon.png";
 
 const Projects = () => {
   return (
-    <>
+    <div>
       <Card sx={{ maxWidth: 250 }}>
         <CardActionArea>
           <CardMedia
@@ -20,13 +20,13 @@ const Projects = () => {
             <Typography gutterBottom variant="h5" component="div">
               Reddit-Charged App
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body1">
               A Reddit app built with React-Redux using RTK Queries
             </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
-    </>
+    </div>
   );
 };
 export default Projects;
