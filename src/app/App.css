@@ -95,42 +95,12 @@
   flex-wrap: wrap;
   min-height: 60vh;
 }
+/* End main styling */
+
+/* About page styling*/
 
 .About {
   flex-basis: 100%;
-}
-
-.Skills {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  flex-basis: 100%;
-  overflow: hidden;
-}
-
-.skills-container::before {
-  content: "";
-  height: 100%;
-  top: 0;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  background: linear-gradient(
-    52deg,
-    #f2fc9f 0%,
-
-    #f7c469 80%
-  );
-  clip-path: polygon(0% 0%, 0% 30%, 140% 50%, 0% 70%);
-}
-.skill-box {
-  position: absolute;
-  background-color: #56bfb5;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 main.About::before {
@@ -144,48 +114,6 @@ main.About::before {
   background-color: #8ecccc;
   clip-path: polygon(0 0, 100% 0, 100% 100%);
 }
-.bg1::before {
-  content: "";
-  position: absolute;
-  border-radius: 15px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #50717b;
-  clip-path: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
-}
-main.Skills::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.Projects {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  flex-basis: 100%;
-  overflow: hidden;
-}
-main.Projects::before {
-  content: "";
-  position: absolute;
-  border-radius: 15px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #7a9eaf;
-  clip-path: polygon(0% 15%, 50% 0%, 75% 0%, 5% 80%);
-}
-/* End main styling */
-
-/* About page styling*/
 .about-background {
   position: relative;
   display: flex;
@@ -230,8 +158,88 @@ main.Projects::before {
   opacity: 0.8;
   font-size: calc(2px + 2vmin);
 }
-
+.bg1::before {
+  content: "";
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #50717b;
+  clip-path: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
+}
 /* End about page styling*/
+
+/*Project page styling*/
+.Projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-basis: 100%;
+  overflow: hidden;
+  background-color: #fdffa2;
+}
+main.Projects::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7a9eaf;
+  clip-path: polygon(100% 60%, 40% 0%, 98% 0%, 0 90%);
+}
+.projects-container {
+}
+.card {
+  background-color: rgb(255, 255, 255);
+}
+/*End Project page styling*/
+/*Skills page styling*/
+main.Skills::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.Skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-basis: 100%;
+  overflow: hidden;
+}
+
+.skills-container::before {
+  content: "";
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(
+    52deg,
+    #f2fc9f 0%,
+
+    #f7c469 80%
+  );
+  clip-path: polygon(0% 0%, 0% 30%, 140% 50%, 0% 70%);
+}
+.skill-box {
+  position: absolute;
+  background-color: #56bfb5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*End Skills page styling*/
 
 /* Navigation styling */
 .nav {

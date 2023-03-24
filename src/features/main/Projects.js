@@ -1,22 +1,25 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import redditChargedLogo from "../../img/reddit-charged/favicon.png";
 
 const Projects = () => {
   return (
-    <div>
-      <Card sx={{ maxWidth: 250 }}>
+    <>
+      <div className="projects-container"></div>
+      <Card sx={{ maxWidth: 250, margin: 2 }} variant="elevation">
         <CardActionArea>
           <CardMedia
+            className="card"
             component="img"
             height="140"
             image={redditChargedLogo}
             alt="reddit-charged app"
           />
-          <CardContent>
+          <CardContent className="card">
             <Typography gutterBottom variant="h5" component="div">
               Reddit-Charged App
             </Typography>
@@ -26,7 +29,21 @@ const Projects = () => {
           </CardContent>
         </CardActionArea>
       </Card>
-    </div>
+      <Card sx={{ maxWidth: 250, margin: 2 }} variant="elevation">
+        <CardActionArea>
+          <CardMedia className="card" component="img" height="140" />
+          <CardContent className="card">
+            <Typography gutterBottom variant="h5" component="div">
+              Coming Soon!
+            </Typography>
+            <Typography variant="body1">
+              {" "}
+              New projects are under construction.{" "}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </>
   );
 };
 export default Projects;
