@@ -169,7 +169,7 @@ main.About::before {
   background-color: #50717b;
   clip-path: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
 }
-/* End about page styling*/
+/* End About page styling*/
 
 /*Project page styling*/
 .Projects {
@@ -198,6 +198,7 @@ main.Projects::before {
   background-color: rgb(255, 255, 255);
 }
 /*End Project page styling*/
+
 /*Skills page styling*/
 main.Skills::before {
   content: "";
@@ -233,7 +234,13 @@ main.Skills::before {
 }
 .skill-box {
   position: absolute;
-  background-color: #56bfb5;
+
+  background: linear-gradient(
+    100deg,
+    #56bfb5,
+    #56bfb5,
+    rgba(80, 80, 52, 0.8) 100%
+  );
   top: 0;
   left: 0;
   width: 100%;
@@ -280,17 +287,17 @@ main.Skills::before {
 }
 .nav-button.Skills {
   background-color: #56bfb5;
-  color: #212121;
+  color: white;
 }
 
 .nav-button.About {
   background-color: #8ecccc;
-  color: Black;
+  color: white;
 }
 
 .nav-button.Projects {
   background-color: #7a9eaf;
-  color: Black;
+  color: white;
 }
 
 /* End navigation styling */
