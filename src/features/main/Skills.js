@@ -38,7 +38,7 @@ const Skills = () => {
       <div className="skills-container ">
         <LogoBar
           speed={1.8}
-          size={130}
+          size={108}
           logoClass="logo"
           barClass="logo-bar"
           sliderClass="slider"
