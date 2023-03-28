@@ -139,7 +139,7 @@ main.About::before {
 }
 .about-text {
   position: absolute;
-  opacity: 0.8;
+  opacity: 0.9;
   top: 0;
   right: 0;
   width: 100%;
@@ -151,8 +151,7 @@ main.About::before {
   background-color: white;
   border-radius: 15px;
   padding: 10px;
-  opacity: 0.8;
-  font-size: calc(4px + 2vmin);
+  font-size: calc(3px + 1.5vmin);
 }
 .bg1::before {
   content: "";
@@ -368,13 +367,7 @@ main.Skills::before {
     --fa-bounce-rebound: 10px;
     --fa-bounce-jump-scale-x: 1.5;
   }
-  .about-text {
-    width: 50%;
-    right: 10px;
-  }
-  .about-text p {
-    font-size: 13px;
-  }
+
   .nav button:first-of-type {
     margin-left: 0;
   }

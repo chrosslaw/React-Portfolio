@@ -23,9 +23,13 @@ const About = () => {
       <div className="about-background">
         <div className="about-text">
           <p>
-            This input is only a test of the about text styling! This input is
-            only a test of the about text styling!This input is only a test of
-            the about text styling!
+            This React App will hopefully display my creativity and some of the
+            skills I’ve learned in college and my free time. I started
+            programming in 2019 and can not get enough, and I am open to
+            freelance work or even new career opportunities. My preferred
+            languages are Python, Javascript, and C#, and I would love to start
+            a software or web development career. Check out the skills tab for a
+            complete skills and language knowledge list.
           </p>
         </div>
 
