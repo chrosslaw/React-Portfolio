@@ -2,6 +2,7 @@ import { useState } from "react";
 import myPhoto from "../../img/photos/me/chris-no-bg.png";
 const About = () => {
   const [photo, setPhoto] = useState(myPhoto);
+  const [showMessage, setShowMessage] = useState(true);
 
   const images = [];
   function importAll(img) {
@@ -14,6 +15,7 @@ const About = () => {
   const handleClick = () => {
     let randomNumber = Math.floor(Math.random() * images.length);
     let newPhoto = images[randomNumber];
+    setShowMessage(false);
     setPhoto(newPhoto);
   };
 
@@ -31,6 +33,10 @@ const About = () => {
             a software or web development career. Check out the skills tab for a
             complete skills and language knowledge list.
           </p>
+          <br />
+          {showMessage && (
+            <h2 className="click-change-message">&lt; Transform me!</h2>
+          )}
         </div>
 
         <div id="profile-pic-container">

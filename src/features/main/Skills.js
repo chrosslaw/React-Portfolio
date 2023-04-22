@@ -25,12 +25,20 @@ const Skills = () => {
     <div>
       <ThemeProvider theme={theme}>
         <Box className="skill-box">
-          <Box sx={{ color: "text.secondary", mt: 1, p: 1 }}>
+          <Box
+            sx={{
+              color: "text.secondary",
+              mt: 5,
+              p: 2,
+              bgcolor: "white",
+            }}
+          >
             I came across another website that had a sliding logo bar like this
             and had to try and replicate it with some alterations.
           </Box>
-          <Box sx={{ color: "text.secondary", mt: 1 }}>
-            Please see click here for a non-interactive list of skills.
+          <Box sx={{ color: "text.secondary", bgcolor: "white" }}>
+            Please see click <a href="#">here</a> for a non-interactive list of
+            skills.
           </Box>
         </Box>
       </ThemeProvider>

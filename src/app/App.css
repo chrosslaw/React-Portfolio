@@ -84,12 +84,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  max-width: 1080px;
+
   margin: 5px auto;
   border-radius: 15px;
   padding: 10px;
   flex-wrap: wrap;
-  min-height: 60vh;
+  min-height: 70vh;
 }
 /* End main styling */
 
@@ -122,6 +122,31 @@ main.About::before {
   max-width: 1080px;
   border-radius: 15px;
 }
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
+      0 0 40px rgba(235, 53, 69, 0.87), 0 0 80px rgba(235, 53, 69, 0.87),
+      0 0 90px rgba(235, 53, 69, 0.87), 0 0 100px rgba(235, 53, 69, 0.87),
+      0 0 150px rgba(235, 53, 69, 0.87);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.click-change-message {
+  animation: flicker 1.5s infinite alternate;
+}
+
 #profile-pic-container {
   position: absolute;
   bottom: 0;
@@ -142,7 +167,7 @@ main.About::before {
   opacity: 0.9;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 60%;
   font-size: calc(4px + 2vmin);
   padding: 10px;
 }
@@ -228,6 +253,9 @@ main.Skills::before {
 }
 .skill-box {
   position: absolute;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+
   background: linear-gradient(
     100deg,
     #56bfb5,
@@ -379,6 +407,9 @@ main.Skills::before {
   @media screen and (min-width: 650px) {
     .nav button {
       font-size: calc(3px + 1.5vmin);
+    }
+    .click-change-message {
+      float: left;
     }
   }
   @media screen and (min-width: 960px) {
