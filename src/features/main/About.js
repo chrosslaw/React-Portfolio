@@ -28,11 +28,10 @@ const About = () => {
             skills I’ve learned in college and my free time. I started
             programming in 2019 and can not get enough, and I am open to
             freelance work or even new career opportunities. My preferred
-            languages are Python, Javascript, and C#, and I would love to start
-            a software or web development career. Check out the skills tab for a
-            complete skills and language knowledge list.
+            languages are Python, Javascript, and C#. Check out the skills tab
+            for a full list of my skills and languages.
           </p>
-          <br />
+
           {clickCount === 0 && (
             <h2 className="click-change-message">
               {" "}

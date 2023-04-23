@@ -29,15 +29,15 @@ const Skills = () => {
             sx={{
               color: "text.secondary",
               mt: 5,
-              p: 2,
-              bgcolor: "white",
+              p: 1,
+              bgcolor: "text.background",
             }}
           >
             I came across another website that had a sliding logo bar like this
             and had to try and replicate it with some alterations to showcase my
             skills.
           </Box>
-          <Box sx={{ color: "text.secondary", p: 2, bgcolor: "white" }}>
+          <Box sx={{ color: "text.secondary", pb: 1 }}>
             Please see click{" "}
             <a href={resume} target="_blank" rel="noreferrer">
               here
