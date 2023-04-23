@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Logo from "./Logo";
+
 const LogoBar = ({
   speed,
   size,

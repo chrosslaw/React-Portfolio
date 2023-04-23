@@ -145,6 +145,7 @@ main.About::before {
 
 .click-change-message {
   animation: flicker 1.5s infinite alternate;
+  float: none;
 }
 
 #profile-pic-container {
@@ -167,7 +168,7 @@ main.About::before {
   opacity: 0.9;
   top: 0;
   right: 0;
-  width: 60%;
+
   font-size: calc(4px + 2vmin);
   padding: 10px;
 }
@@ -399,6 +400,10 @@ main.Skills::before {
   .nav button:first-of-type {
     margin-left: 0;
   }
+  .click-change-message {
+    float: right;
+    margin-top: 0px;
+  }
 
   .nav button:last-of-type {
     margin-right: 0;
@@ -408,10 +413,15 @@ main.Skills::before {
     .nav button {
       font-size: calc(3px + 1.5vmin);
     }
-    .click-change-message {
-      float: left;
+
+    about-text {
+      width: 100%;
     }
   }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1000px) {
+    .click-change-message {
+      float: none;
+      margin-top: 0px;
+    }
   }
 }

@@ -1,5 +1,5 @@
 import LogoBar from "../logo-bar/LogoBar";
-
+import resume from "../../resources/Christopher Lawrence Resume 2023.pdf";
 import { Box, ThemeProvider, createTheme } from "@mui/system";
 
 const theme = createTheme({
@@ -34,11 +34,15 @@ const Skills = () => {
             }}
           >
             I came across another website that had a sliding logo bar like this
-            and had to try and replicate it with some alterations.
-          </Box>
-          <Box sx={{ color: "text.secondary", bgcolor: "white" }}>
-            Please see click <a href="#">here</a> for a non-interactive list of
+            and had to try and replicate it with some alterations to showcase my
             skills.
+          </Box>
+          <Box sx={{ color: "text.secondary", p: 2, bgcolor: "white" }}>
+            Please see click{" "}
+            <a href={resume} target="_blank" rel="noreferrer">
+              here
+            </a>{" "}
+            to see my resume with a non-interactive list of skills.
           </Box>
         </Box>
       </ThemeProvider>

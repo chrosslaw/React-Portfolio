@@ -2,8 +2,7 @@ import { useState } from "react";
 import myPhoto from "../../img/photos/me/chris-no-bg.png";
 const About = () => {
   const [photo, setPhoto] = useState(myPhoto);
-  const [showMessage, setShowMessage] = useState(true);
-
+  const [clickCount, setClickCount] = useState(0);
   const images = [];
   function importAll(img) {
     img.keys().forEach((key) => images.push(img(key)));
@@ -15,8 +14,8 @@ const About = () => {
   const handleClick = () => {
     let randomNumber = Math.floor(Math.random() * images.length);
     let newPhoto = images[randomNumber];
-    setShowMessage(false);
     setPhoto(newPhoto);
+    setClickCount(clickCount + 1);
   };
 
   return (
@@ -34,8 +33,25 @@ const About = () => {
             complete skills and language knowledge list.
           </p>
           <br />
-          {showMessage && (
-            <h2 className="click-change-message">&lt; Transform me!</h2>
+          {clickCount === 0 && (
+            <h2 className="click-change-message">
+              {" "}
+              Click me for a transformation!{" "}
+            </h2>
+          )}
+          {clickCount > 2 && clickCount < 8 && (
+            <h2 className="click-change-message">Cool, huh?</h2>
+          )}
+          {clickCount > 10 && clickCount < 14 && (
+            <h2 className="click-change-message">
+              I guess you are having fun!
+            </h2>
+          )}
+          {clickCount > 17 && clickCount < 20 && (
+            <h2 className="click-change-message">Alright, that's enough.</h2>
+          )}
+          {clickCount > 22 && (
+            <h2 className="click-change-message">Really....</h2>
           )}
         </div>
 
