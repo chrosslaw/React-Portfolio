@@ -35,7 +35,9 @@ const Skills = () => {
           >
             I came across another website that had a sliding logo bar like this
             and had to try and replicate it with some alterations to showcase my
-            skills.
+            skills. Additionally, I designed these tab-like pages to simulate
+            sifting through a file cabinet. Please, feel free to let me know
+            what you think.
           </Box>
           <Box sx={{ color: "text.secondary", pb: 1 }}>
             Please see click{" "}

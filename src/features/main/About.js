@@ -27,9 +27,9 @@ const About = () => {
             This React App will hopefully display my creativity and some of the
             skills I’ve learned in college and my free time. I started
             programming in 2019 and can not get enough, and I am open to
-            freelance work or even new career opportunities. My preferred
-            languages are Python, Javascript, and C#. Check out the skills tab
-            for a full list of my skills and languages.
+            freelance work. My preferred languages are Python, Javascript, and
+            C#. Check out the skills tab to find my resume along with a full of
+            my skills and languages.
           </p>
 
           {clickCount === 0 && (
