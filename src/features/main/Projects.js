@@ -44,7 +44,7 @@ const Projects = () => {
               ChrossTech App
             </Typography>
             <Typography variant="body1">
-              A development playground showcasing all my
+              A showcasing of all my Next.JS React apps.
             </Typography>
           </CardContent>
         </CardActionArea>
