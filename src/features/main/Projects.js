@@ -78,7 +78,7 @@ const Projects = () => {
             component="img"
             height="140"
             alt="Coming Soon Image"
-            image={comingSoonImage}
+            image={nextRedditLogo}
           />
 
           <CardContent className="card">
