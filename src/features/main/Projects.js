@@ -6,6 +6,7 @@ import { CardActionArea } from "@mui/material";
 import redditChargedLogo from "../../img/reddit-charged/favicon.png";
 import chrossTechLogo from "../../img/chrosstech/C.svg";
 import comingSoonImage from "../../img/comingsoon.jpg";
+import nextRedditLogo from "../../img/next-reddit/logo.png";
 
 const Projects = () => {
   return (
@@ -58,6 +59,28 @@ const Projects = () => {
             alt="Coming Soon Image"
             image={comingSoonImage}
           />
+
+          <CardContent className="card">
+            <Typography gutterBottom variant="h5" component="div">
+              Next.Reddit App
+            </Typography>
+            <Typography variant="body1">
+              {" "}
+              React app built with Next.JS and the Reddit API.{" "}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+      <Card sx={{ maxWidth: 250, margin: 2 }} variant="elevation">
+        <CardActionArea>
+          <CardMedia
+            className="card"
+            component="img"
+            height="140"
+            alt="Coming Soon Image"
+            image={comingSoonImage}
+          />
+
           <CardContent className="card">
             <Typography gutterBottom variant="h5" component="div">
               Coming Soon!
