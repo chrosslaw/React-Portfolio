@@ -51,13 +51,13 @@ const Projects = () => {
         </CardActionArea>
       </Card>
       <Card sx={{ maxWidth: 250, margin: 2 }} variant="elevation">
-        <CardActionArea>
+        <CardActionArea href="https://next-reddit.chrosstech.com">
           <CardMedia
             className="card"
             component="img"
             height="140"
-            alt="Coming Soon Image"
-            image={comingSoonImage}
+            alt="Next-reddit logo"
+            image={nextRedditLogo}
           />
 
           <CardContent className="card">
@@ -78,7 +78,7 @@ const Projects = () => {
             component="img"
             height="140"
             alt="Coming Soon Image"
-            image={nextRedditLogo}
+            image={comingSoonImage}
           />
 
           <CardContent className="card">
